@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Summer Collection</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #222;
+      color: #fff;
+      padding: 1rem 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h1 {
+      font-size: 1.8rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #1abc9c;
+    }
+
+	/* Small Button for Collection */
+    .btn-small {
+      background-color: #1abc9c;
+      color: #fff;
+      padding: 0.5rem 1.2rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      transition: background 0.3s ease;
+      margin-top: 0.5rem;
+      display: inline-block;
+    }
+
+    .btn-small:hover {
+      background-color: #16a085;
+    }
+
+    /* Hero Section */
+    .hero {
+  background: url('file:///E:/CSS/Pic/sum.png') no-repeat center center/cover;
+  color: black;
+  text-align: center;
+  padding: 8rem 2rem;
+  position: relative;
+}
+
+/* Brighten the text */
+.hero h2, .hero p {
+  font-size:2rem;
+  color: white; /* Brighten the text */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Optional: add a subtle shadow to make text pop */
+  filter: brightness(120%); /* Optional: make the text 20% brighter */
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dim the background */
+  z-index: -1; /* Keep the overlay behind the text */
+}
+
+
+    /* Collection Section */
+    .collection-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 4rem 0;
+    }
+
+    .collection-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .collection-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .collection-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      width: 100%;
+      padding: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .collection-item:hover .overlay {
+      transform: translateY(-10px);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #222;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+    /* Back to Home Button */
+    .btn-back {
+      background-color: #1abc9c;
+      color: #fff;
+      padding: 0.8rem 2rem;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      transition: background 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-back:hover {
+      background-color: #16a085;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <div class="container">
+    <h1>Clothing Brand</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#collection">Collection</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <h2>Summer Vibes Collection</h2>
+    <p>Stay cool and stylish this summer with our exclusive collection.</p>
+  </div>
+</section>
+
+<!-- Collection Section -->
+<div class="container">
+  <div class="collection-grid">
+    <div class="collection-item">
+      <img src="file:///E:/CSS/Pic/a1.png" alt="Summer Wear 1">
+      <div class="overlay">
+        <h3>Beach Wear</h3>
+        <p>Relax in style</p>
+        <a href="s1.html" class="btn-small">More Details</a>
+      </div>
+    </div>
+    <div class="collection-item">
+      <img src="file:///E:/CSS/Pic/a2.png" alt="Summer Wear 2">
+      <div class="overlay">
+        <h3>Casual Vibes</h3>
+        <p>Comfort meets style</p>
+        <a href="s2.html" class="btn-small">More Details</a>
+      </div>
+    </div>
+    <div class="collection-item">
+      <img src="file:///E:/CSS/Pic/a3.png" alt="Summer Wear 3">
+      <div class="overlay">
+        <h3>Sporty Look</h3>
+        <p>Stay fresh and active</p>
+        <a href="s3.html" class="btn-small">More Details</a>
+      </div>
+    </div>
+    <div class="collection-item">
+      <img src="file:///E:/CSS/Pic/a4.png" alt="Summer Wear 4">
+      <div class="overlay">
+        <h3>Vacation Outfit</h3>
+        <p>Chill in the sun</p>
+        <a href="s4.html" class="btn-small">More Details</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Back button -->
+<div class="container">
+  <a href="index.html" class="btn-back">← Back to Home</a>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Clothing Brand. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

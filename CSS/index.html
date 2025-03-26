@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clothing Showcase</title>
+
+</head>
+<style>
+
+ {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: white;
+  color: #333;
+margin:0;
+padding:0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav {
+  background-color: #222;
+  color: #fff;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #1abc9c;
+}
+
+/* Hero Section */
+header {
+  height: 100vh;
+  background: url() no-repeat center center/cover;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding: 2rem;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 0;
+}
+
+header h2, 
+header p, 
+header .btn {
+  position: relative;
+  z-index: 1;
+}
+
+header h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+header p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background-color: #1abc9c;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background-color: #16a085;
+}
+
+/* Small Button for Collection */
+.btn-small {
+  background-color: #1abc9c;
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+  margin-top: 0.5rem;
+  display: inline-block;
+}
+
+.btn-small:hover {
+  background-color: #16a085;
+}
+
+/* Collection Section */
+#collection {
+  padding: 4rem 0;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.collection-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.collection-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.collection-item:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  width: 100%;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.collection-item:hover .overlay {
+  transform: translateY(-10px);
+}
+
+/* About Section */
+#about {
+  padding: 4rem 0;
+  background-color: #f4f4f4;
+}
+
+#about h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+#about p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Contact Section */
+#contact {
+  padding: 4rem 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, textarea, button {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #1abc9c;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #16a085;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #222;
+  color: #fff;
+  font-size: 0.9rem;
+}
+</style>
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="container">
+      <h1>Clothings</h1>
+      <ul>
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<!-- Hero Section -->
+<header style="background: url('file:///E:/CSS/Pic/abc.jpg') no-repeat center center/cover;">
+  <div class="container">
+    <h2>Discover Your Style</h2>
+    <p>Unleash your personality with our exclusive clothing collection.</p>
+    <a href="#collection" class="btn">Explore Collection</a>
+  </div>
+</header>
+
+
+  <!-- Collection Section -->
+  <section id="collection">
+    <div class="container">
+      <h2>Our Latest Collection</h2>
+      <div class="collection-grid">
+        <div class="collection-item">
+  <img src="file:///E:/CSS/Pic/a.png" alt="Fashion 1">
+  <div class="overlay">
+    <h3>Summer Vibes</h3>
+    <p>Comfort meets style.</p>
+    <a href="summer.html" class="btn-small">View More</a>
+  </div>
+</div>
+        <div class="collection-item">
+  <img src="file:///E:/CSS/Pic/b.png" alt="Fashion 2">
+  <div class="overlay">
+    <h3>Street Wear</h3>
+    <p>Casual and cool</p>
+    <a href="street.html" class="btn-small">View More</a>
+  </div>
+</div>
+        <div class="collection-item">
+  <img src="file:///E:/CSS/Pic/c.png" alt="Fashion 3">
+  <div class="overlay">
+    <h3>Winter Essentials</h3>
+    <p>Stay warm, look cool</p>
+    <a href="warm.html" class="btn-small">View More</a>
+  </div>
+</div>
+<div class="collection-item">
+  <img src="file:///E:/CSS/Pic/c.png" alt="Fashion 4">
+  <div class="overlay">
+    <h3>Formal Wear</h3>
+    <p>Elegance redefined</p>
+    <a href="formal.html" class="btn-small">View More</a>
+  </div>
+</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>
+        We are a fashion brand dedicated to creating timeless pieces with modern style.
+        Our designs are crafted with care and attention to detail, ensuring you look your best.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+       <a href="main.html"><button type="submit">Send Message</button></a>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Clothing Brand. All rights reserved.</p>
+  </footer>
+  
+</body>
+</html>
